@@ -21,4 +21,9 @@
       <template>There is not much else to say</template>
   </category>
   
+  <category>
+      <pattern>MY NAME IS *</pattern>
+      <template>Hi <set name = "username"></set></template>
+  </category>
+  
 </aiml>
