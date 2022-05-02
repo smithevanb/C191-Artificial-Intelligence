@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+  
+  <category>
+      <pattern>WHAT IS YOUR NAME</pattern>
+      <template>My name is WGU bot</template>
+  </category>
+  
+  <category>
+      <pattern>TELL ME WHAT * IS</pattern>
+      <template><srai> WHAT IS <star/></srai></template>
+  </category>
+  
+  <category>
+      <pattern>TELL ME MORE</pattern>
+      <that>MY NAME IS WGU BOT</that>
+      <template>There is not much else to say</template>
+  </category>
+  
+</aiml>
