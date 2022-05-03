@@ -23,7 +23,25 @@
   
   <category>
       <pattern>MY NAME IS *</pattern>
-      <template>Hi <set name = "username"></set></template>
+      <template>Hi <set name = "username"><star /></set></template>
+  </category>
+  
+  <category>
+      <pattern>WHAT IS MY NAME</pattern>
+      <template>Your name is <get name = "username" /></template>
+  </category>
+  
+  <category>
+      <pattern>WHAT IS *</pattern>
+      <template>
+          <think><set name = "field"><star /></set></think>
+          
+          <condition name = "field" value = "Software Engineer">A Software Engineer designs, develops, maintains, and implements computer software.</condition>
+          <condition name = "field" value = "Network Administrator">A Network Admin maintains the computer network infrastructure of a company, from LAN to WAN.</condition>
+          <condition name = "field" value = "Cybersecurity Analyst">A Cybersecurity Analyst is a trained cyberprofessional who specializes in network and IT infrastructure security.</condition>
+          <condition name = "field" value = "QA Engineer">A Quality Assurance Engineer focuses on improving software development processes and preventing defects in production.</condition>
+          <condition name = "field" value = "Hardware Engineer">A Computer Hardware Engineers research, design, develop, and test computer systems and components such as circuit boards, processors, memory devices, networks, and routers.</condition>
+      </template>
   </category>
   
 </aiml>
