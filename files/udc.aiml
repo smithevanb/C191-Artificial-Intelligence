@@ -7,10 +7,12 @@
   
   <category>
       <pattern>START</pattern>
-      
-      <template><delay>2</delay>Hello! What is your major?
+      <template><delay>1</delay><image>https://cdn-icons.flaticon.com/png/128/3662/premium/3662962.png?token=exp=1651724899~hmac=b8bc597eb82d9c076c915faeabd8b55f</image>
       <split/>
-      <delay>2</delay>
+      <delay>1</delay>
+      Hello! I'm the {INSERT UNIVERSITY VALUE HERE} Career Bot! What is your major?
+      <split/>
+      <delay>1</delay>
       <button>
           <text>Computer Science major</text>
           <postback>compsci</postback>
@@ -24,12 +26,19 @@
   
   <category>
       <pattern>NONCOMPSCI</pattern>
-      <template>I'm sorry, this bot is to help Comp Sci majors. Please look at some of our other resources.</template>
+      
+      <template>
+          <delay>1</delay>
+          <image>https://cdn-icons.flaticon.com/png/128/4046/premium/4046264.png?token=exp=1651725205~hmac=0cdb92ba62e7983f2efafa8b6723d960</image>
+          I'm sorry, this bot is to help Comp Sci majors. Please look at some of our other resources.
+      </template>
   </category>
   
   <category>
       <pattern>COMPSCI</pattern>
-      <template>Okay great, I'm going to ask you some questions to determine what career might fit you best. Do you like Programming?
+      <template><delay>1</delay>Okay great, I'm going to ask you some questions to determine some careers that might interest you. Do you like Programming?
+      <split/>
+      <delay>1</delay>
       <button>
           <text>Yes</text>
           <postback>likeprogramming</postback>
@@ -42,7 +51,11 @@
   
   <category>
       <pattern>LIKEPROGRAMMING</pattern>
-      <template>So you like programming. Which do you like more:
+      <template><delay>1</delay>
+      <image>https://cdn-icons.flaticon.com/png/128/6062/premium/6062646.png?token=exp=1651725351~hmac=d0f34bcc7c66a32959dbbfb9129a2c3f</image>
+      <delay>1</delay>
+      So you like programming. Which do you like more:
+      <delay>1</delay>
       <button>
           <text>Writing Code</text>
           <postback>writingcode</postback>
@@ -55,7 +68,13 @@
   
   <category>
       <pattern>WRITINGCODE</pattern>
-      <template>A great role for those that like programming and writing code is Software Engineer.
+      <template>
+          <delay>1</delay>
+          <image>https://cdn-icons.flaticon.com/png/128/3950/premium/3950815.png?token=exp=1651725774~hmac=565c036bd545569ad978aa88b2e5c203</image>
+          <split/>
+          <delay>1</delay>A great role for those that like programming and writing code is Software Engineer.
+      <split/>
+      <delay>1</delay>
       <link>
           <text>Learn more about becoming a Software Engineer</text>
           <url>https://www.wgu.edu/career-guide/information-technology/software-engineer-career.html</url>
@@ -65,17 +84,25 @@
   
   <category>
       <pattern>FIXINGBUGS</pattern>
-      <template>If you enjoy the process of debugging, you may want to consider becoming a Quality Assurance Analyst.
-      <link>
-          <text>Learn more about Software QA</text>
-          <url>https://www.wgu.edu/career-guide/information-technology/qa-analyst-career.html</url>
-      </link>
+          <template>
+          <delay>1</delay>
+          <image>https://cdn-icons-png.flaticon.com/128/7383/7383863.png</image>
+          <split/>
+          <delay>1</delay>If you enjoy the process of debugging, you may want to consider becoming a Quality Assurance Analyst.
+          <split/>
+          <delay>1</delay>
+          <link>
+              <text>Learn more about Software QA</text>
+              <url>https://www.wgu.edu/career-guide/information-technology/qa-analyst-career.html</url>
+          </link>
       </template>
   </category>
   
   <category>
       <pattern>NOTLIKEPROGRAMMING</pattern>
-      <template>There are plenty of careeers in Tech and IT that do not focus on Programming. Do you have an interest in working with hardware?
+      <template><delay>1</delay>There are plenty of careeers in Tech and IT that do not focus on Programming. Do you have an interest in working with hardware?
+      <split/>
+      <delay>1</delay>
       <button>
           <text>Yes</text>
           <postback>likehardware</postback>
@@ -89,7 +116,13 @@
   
   <category>
       <pattern>LIKEHARDWARE</pattern>
-      <template>A career that might interest you is Hardware Engineer. It requires strong technical skills, and working with physical components.
+      <template>
+          <delay>1</delay>
+          <image>https://cdn-icons-png.flaticon.com/128/2764/2764749.png</image>
+          
+          <delay>1</delay>A career that might interest you is Hardware Engineer. It requires strong technical skills, and working with physical components.
+          <split/>
+          <delay>1</delay>
           <link>
               <text>Learn more about Hardware Engineering</text>
               <url>
@@ -101,7 +134,9 @@
   
   <category>
       <pattern>NOTLIKEHARDWARE</pattern>
-      <template>There are other jobs besides just Software and Hardware. Do either of these topics interest you?
+      <template><delay>1</delay>There are other jobs besides just Software and Hardware. Do either of these topics interest you?
+      <split/>
+      <delay>1</delay>
       <button>
           <text>Cybersecurity</text>
           <postback>cyber</postback>
@@ -116,7 +151,13 @@
   
   <category>
       <pattern>CYBER</pattern>
-      <template>Cybersecurity is a vast field with a lot of promising growth. It requires creativity and the ability to work in a fast-paced environment.
+      <template>
+          <delay>1</delay>
+          <image>https://cdn-icons-png.flaticon.com/128/2092/2092757.png</image>
+          
+          <delay>1</delay>Cybersecurity is a vast field with a lot of promising growth. It requires creativity and the ability to work in a fast-paced environment.
+          <split/>
+          <delay>1</delay>
           <link>
               <text>Learn more about Cybersecurity jobs.</text>
               <url>https://www.wgu.edu/blog/guide-entry-level-cyber-security-jobs2102.html</url>
@@ -126,7 +167,13 @@
   
   <category>
       <pattern>NETWORK</pattern>
-      <template>Network Engineers design, build, and implement IT networking systems, and work alongside Network Admins and other roles. 
+      <template>
+          <delay>1</delay>
+          <image>https://cdn-icons-png.flaticon.com/128/3598/3598209.png</image>
+          
+          <delay>1</delay>Network Engineers design, build, and implement IT networking systems, and work alongside Network Admins and other roles. 
+          <split/>
+          <delay>1</delay>
           <link>
               <text>Learn more about becoming a Network Engineer.</text>
               <url>https://www.wgu.edu/career-guide/information-technology/network-engineer-career.html</url>
