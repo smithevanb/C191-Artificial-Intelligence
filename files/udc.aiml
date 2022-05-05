@@ -7,7 +7,8 @@
   
   <category>
       <pattern>START</pattern>
-      <template><delay>1</delay><image>https://cdn-icons.flaticon.com/png/128/3662/premium/3662962.png?token=exp=1651724899~hmac=b8bc597eb82d9c076c915faeabd8b55f</image>
+      <template><delay>1</delay>
+      <image>https://cdn-icons.flaticon.com/png/128/3662/premium/3662962.png?token=exp=1651786772~hmac=1474a35afbb0577431bee79e6e5cb1cb</image>
       <split/>
       <delay>1</delay>
       Hello! I'm the {INSERT UNIVERSITY VALUE HERE} Career Bot! What is your major?
@@ -29,7 +30,7 @@
       
       <template>
           <delay>1</delay>
-          <image>https://cdn-icons.flaticon.com/png/128/4046/premium/4046264.png?token=exp=1651725205~hmac=0cdb92ba62e7983f2efafa8b6723d960</image>
+          <image>https://cdn-icons.flaticon.com/png/128/4046/premium/4046264.png?token=exp=1651786726~hmac=1e9c23cbf54ad85e189bf1088bf306b6</image>
           I'm sorry, this bot is to help Comp Sci majors. Please look at some of our other resources.
       </template>
   </category>
@@ -52,7 +53,7 @@
   <category>
       <pattern>LIKEPROGRAMMING</pattern>
       <template><delay>1</delay>
-      <image>https://cdn-icons.flaticon.com/png/128/6062/premium/6062646.png?token=exp=1651725351~hmac=d0f34bcc7c66a32959dbbfb9129a2c3f</image>
+      <image>https://cdn-icons.flaticon.com/png/128/6062/premium/6062646.png?token=exp=1651786896~hmac=fc9c9dfe76c48c209d5c1276eedec3c8</image>
       <delay>1</delay>
       So you like programming. Which do you like more:
       <delay>1</delay>
@@ -70,7 +71,7 @@
       <pattern>WRITINGCODE</pattern>
       <template>
           <delay>1</delay>
-          <image>https://cdn-icons.flaticon.com/png/128/3950/premium/3950815.png?token=exp=1651725774~hmac=565c036bd545569ad978aa88b2e5c203</image>
+          <image>https://cdn-icons.flaticon.com/png/128/3950/premium/3950815.png?token=exp=1651786816~hmac=541a66612aa64471a6c09070e77b8983</image>
           <split/>
           <delay>1</delay>A great role for those that like programming and writing code is Software Engineer.
       <split/>
@@ -182,11 +183,6 @@
   </category>
   
   <category>
-      <pattern>TELL ME WHAT * IS</pattern>
-      <template><srai> WHAT IS <star/></srai></template>
-  </category>
-  
-  <category>
       <pattern>MY NAME IS *</pattern>
       <template>Hi <set name = "username"><star /></set></template>
   </category>
@@ -197,16 +193,21 @@
   </category>
   
   <category>
-      <pattern>WHAT IS *</pattern>
+      <pattern>WHAT IS A *</pattern>
       <template>
           <think><set name = "field"><star /></set></think>
           
           <condition name = "field" value = "Software Engineer">A Software Engineer designs, develops, maintains, and implements computer software.</condition>
           <condition name = "field" value = "Network Engineer">A Network Engineer maintains the computer network infrastructure of a company, from LAN to WAN.</condition>
           <condition name = "field" value = "Cybersecurity Analyst">A Cybersecurity Analyst is a trained cyberprofessional who specializes in network and IT infrastructure security.</condition>
-          <condition name = "field" value = "QA Engineer">A Quality Assurance Engineer focuses on improving software development processes and preventing defects in production.</condition>
+          <condition name = "field" value = "QA Analyst">A Quality Assurance Analyst focuses on improving software development processes and preventing defects in production.</condition>
           <condition name = "field" value = "Hardware Engineer">A Computer Hardware Engineers research, design, develop, and test computer systems and components such as circuit boards, processors, memory devices, networks, and routers.</condition>
       </template>
+  </category>
+  
+  <category>
+      <pattern>TELL ME WHAT A * IS</pattern>
+      <template><srai> WHAT IS A <star/></srai></template>
   </category>
   
 </aiml>
