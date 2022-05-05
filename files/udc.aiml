@@ -2,23 +2,141 @@
 <aiml>
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
+    <template>I have no answer for that. Please type "Start" to begin.</template>
   </category>
   
   <category>
-      <pattern>WHAT IS YOUR NAME</pattern>
-      <template>My name is WGU bot</template>
+      <pattern>START</pattern>
+      
+      <template><delay>2</delay>Hello! What is your major?
+      <split/>
+      <delay>2</delay>
+      <button>
+          <text>Computer Science major</text>
+          <postback>compsci</postback>
+      </button>
+      <button>
+          <text>Non-Computer Science major</text>
+          <postback>noncompsci</postback>
+      </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>NONCOMPSCI</pattern>
+      <template>I'm sorry, this bot is to help Comp Sci majors. Please look at some of our other resources.</template>
+  </category>
+  
+  <category>
+      <pattern>COMPSCI</pattern>
+      <template>Okay great, I'm going to ask you some questions to determine what career might fit you best. Do you like Programming?
+      <button>
+          <text>Yes</text>
+          <postback>likeprogramming</postback>
+      </button>
+      <button>
+          <text>No</text>
+          <postback>notlikeprogramming</postback>
+      </button></template>
+  </category>
+  
+  <category>
+      <pattern>LIKEPROGRAMMING</pattern>
+      <template>So you like programming. Which do you like more:
+      <button>
+          <text>Writing Code</text>
+          <postback>writingcode</postback>
+      </button>
+      <button>
+          <text>Fixing Bugs</text>
+          <postback>fixingbugs</postback>
+      </button></template>
+  </category>
+  
+  <category>
+      <pattern>WRITINGCODE</pattern>
+      <template>A great role for those that like programming and writing code is Software Engineer.
+      <link>
+          <text>Learn more about becoming a Software Engineer</text>
+          <url>https://www.wgu.edu/career-guide/information-technology/software-engineer-career.html</url>
+      </link>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>FIXINGBUGS</pattern>
+      <template>If you enjoy the process of debugging, you may want to consider becoming a Quality Assurance Analyst.
+      <link>
+          <text>Learn more about Software QA</text>
+          <url>https://www.wgu.edu/career-guide/information-technology/qa-analyst-career.html</url>
+      </link>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>NOTLIKEPROGRAMMING</pattern>
+      <template>There are plenty of careeers in Tech and IT that do not focus on Programming. Do you have an interest in working with hardware?
+      <button>
+          <text>Yes</text>
+          <postback>likehardware</postback>
+      </button>
+      <button>
+          <text>No</text>
+          <postback>notlikehardware</postback>
+      </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>LIKEHARDWARE</pattern>
+      <template>A career that might interest you is Hardware Engineer. It requires strong technical skills, and working with physical components.
+          <link>
+              <text>Learn more about Hardware Engineering</text>
+              <url>
+                 https://www.wgu.edu/career-guide/information-technology/hardware-engineer-career.html
+              </url>
+          </link>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>NOTLIKEHARDWARE</pattern>
+      <template>There are other jobs besides just Software and Hardware. Do either of these topics interest you?
+      <button>
+          <text>Cybersecurity</text>
+          <postback>cyber</postback>
+      </button>
+      
+      <button>
+          <text>Network Infrastructure</text>
+          <postback>network</postback>
+          </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>CYBER</pattern>
+      <template>Cybersecurity is a vast field with a lot of promising growth. It requires creativity and the ability to work in a fast-paced environment.
+          <link>
+              <text>Learn more about Cybersecurity jobs.</text>
+              <url>https://www.wgu.edu/blog/guide-entry-level-cyber-security-jobs2102.html</url>
+          </link>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>NETWORK</pattern>
+      <template>Network Engineers design, build, and implement IT networking systems, and work alongside Network Admins and other roles. 
+          <link>
+              <text>Learn more about becoming a Network Engineer.</text>
+              <url>https://www.wgu.edu/career-guide/information-technology/network-engineer-career.html</url>
+          </link>
+      </template>
   </category>
   
   <category>
       <pattern>TELL ME WHAT * IS</pattern>
       <template><srai> WHAT IS <star/></srai></template>
-  </category>
-  
-  <category>
-      <pattern>TELL ME MORE</pattern>
-      <that>MY NAME IS WGU BOT</that>
-      <template>There is not much else to say</template>
   </category>
   
   <category>
@@ -37,7 +155,7 @@
           <think><set name = "field"><star /></set></think>
           
           <condition name = "field" value = "Software Engineer">A Software Engineer designs, develops, maintains, and implements computer software.</condition>
-          <condition name = "field" value = "Network Administrator">A Network Admin maintains the computer network infrastructure of a company, from LAN to WAN.</condition>
+          <condition name = "field" value = "Network Engineer">A Network Engineer maintains the computer network infrastructure of a company, from LAN to WAN.</condition>
           <condition name = "field" value = "Cybersecurity Analyst">A Cybersecurity Analyst is a trained cyberprofessional who specializes in network and IT infrastructure security.</condition>
           <condition name = "field" value = "QA Engineer">A Quality Assurance Engineer focuses on improving software development processes and preventing defects in production.</condition>
           <condition name = "field" value = "Hardware Engineer">A Computer Hardware Engineers research, design, develop, and test computer systems and components such as circuit boards, processors, memory devices, networks, and routers.</condition>
